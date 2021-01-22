@@ -6,22 +6,19 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light submenu">
+  <nav class="navbar navbar-expand-sm" [ngClass]="{'fixed-top':indicator,'submenu':indicator}">
     <div class="container">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> Players
+  <div class="collapse navbar-collapse" >
+<!--    <div class="btn-group btn-group-toggle combined-search" data-toggle="buttons">
+  <label class="btn btn-secondary submenu-header-btn">
+    <input type="radio" name="options" id="option1" autocomplete="off"> <i class="fa fa-user iconStyles"></i>Player
   </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2" autocomplete="off"> Clan
+  <label class="btn btn-secondary submenu-header-btn">
+    <input type="radio" name="options" id="option2" autocomplete="off"> <i class="fa fa-users iconStyles"></i> Clan
   </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3" autocomplete="off"> Warships
+  <label class="btn btn-secondary submenu-header-btn">
+    <input type="radio" name="options" id="option3" autocomplete="off"> <i class="fa fa-ship iconStyles"></i> Warship
   </label>
 </div>
   <form class="form-inline">
@@ -31,7 +28,51 @@
     <button class="btn btn-outline-secondary" type="button">Search</button>
   </div>
 </div>
-  </form>
+  </form>-->
+<!--    <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group submenu-header-btn" role="group" aria-label="First group">
+    <button type="button" class="btn border-rght"><i class="fa fa-user iconStyles"></i>Player</button>
+    <button type="button" class="btn border-rght"><i class="fa fa-users iconStyles"></i> Clan</button>
+    <button type="button" class="btn border-rght"><i class="fa fa-ship iconStyles"></i> Warship</button>
+  </div>
+  </div>
+    </div>
+      <div style="width: 30%  ;">
+    <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+     </div>
+      <div class="input-group-append">
+    <button type="button" class="btn submenu-header-btn">Search</button>
+  </div>
+  </div>-->
+    <div class="combined-search" >
+    <form class="form-inline pull-left playerSearch">
+
+
+<div class="input-group">
+
+  		<span class="input-group-addon">
+  			<i class="fa fa-user" aria-hidden="true"></i>
+  			<span class="">Player</span>
+  		</span>
+  		<span class="input-group-addon selected">
+  			<i class="fa fa-users" aria-hidden="true"></i>
+  			<span class="">Clan</span>
+  		</span>
+  		<span class="input-group-addon">
+  			<i class="fa fa-ship" aria-hidden="true"></i><span class="">Warship</span>
+  		</span>
+ 		<input type="text" class="form-control">
+
+
+  		<span class="input-group-btn">
+			<button type="submit" class="btn btn-default">Search</button>
+		</span>
+</div>
+
+</form>
+</div>
   </div>
   </div>
 </nav>
