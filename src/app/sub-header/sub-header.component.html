@@ -52,18 +52,18 @@
 
 <div class="input-group">
 
-  		<span class="input-group-addon">
+  		<span class="input-group-addon" (click)="search('player')" [ngClass]="{'selectedInput':selected==='player'}">
   			<i class="fa fa-user" aria-hidden="true"></i>
-  			<span class="">Player</span>
+  			<span >Player</span>
   		</span>
-  		<span class="input-group-addon selected">
+  		<span class="input-group-addon" (click)="search('clan')" [ngClass]="{'selectedInput':selected==='clan'}">
   			<i class="fa fa-users" aria-hidden="true"></i>
   			<span class="">Clan</span>
   		</span>
-  		<span class="input-group-addon">
+  		<span class="input-group-addon" (click)="search('warship')" [ngClass]="{'selectedInput':selected==='warship'}">
   			<i class="fa fa-ship" aria-hidden="true"></i><span class="">Warship</span>
   		</span>
- 		<input type="text" class="form-control">
+ 		<input type="text" class="form-control" [placeholder]="placeHolder">
 
 
   		<span class="input-group-btn">
