@@ -19,8 +19,14 @@ footer, header, hgroup, menu, nav, section {
 
 .submenu-bg {
   background-color: #f1f0ee;
+  z-index: 99!important;
 }
-
+.colorOrange{
+  color:orange;
+}
+.colorRed{
+  color:red;
+}
 .submenu-header-btn {
   font-size: 14px !important;
   line-height: 1 !important;
@@ -48,7 +54,14 @@ footer, header, hgroup, menu, nav, section {
 .border-rght:focus {
   color: white !important;
   outline: none !important;
-
+}
+.footerFixed{
+  position: relative;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  z-index: 10000;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
@@ -113,7 +126,12 @@ p {
   background-color: #2A6497 !important;
   border: 1px solid #2A6497 !important;
 }
-
+.btn-xs, .btn-group-xs>.btn {
+  padding: 1px 5px !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  border-radius: 3px !important;
+}
 .input-group-addon, .input-group-btn, .input-group .form-control {
   display: table-cell;
 }
@@ -271,4 +289,7 @@ p {
   text-decoration: none !important;
   width: 100%;
   font-weight: 100;
+}
+.margin-8rem{
+  margin-top: 8rem !important;
 }

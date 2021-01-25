@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
+
 @Component({
   selector: 'app-sub-header',
   templateUrl: './sub-header.component.html',
@@ -14,7 +15,8 @@ export class SubHeaderComponent implements OnInit {
   timeout = null;
   show = false;
   searchTickers = [];
-  constructor(private http: HttpClient, private router: Router) {
+
+  constructor(private http: HttpClient, private router: Router,private cdr:ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
@@ -38,32 +40,49 @@ export class SubHeaderComponent implements OnInit {
         break;
     }
   }
+
   open() {
     this.show = true;
   }
+
   hide() {
     this.show = false;
   }
+
   clear() {
     this.search = '';
   }
+
   fetchResults(symbol, count) {
-    if (!symbol) this.hide();
-    this.searchTickers = [{id: 1043648838, name: 'SteadyAsSheGoes'}, {id: 1, name: 'David001'}, {id: 1, name: 'Zeruc002'}];
+    if (!symbol) {
+      this.hide();
+    }
+    this.searchTickers = [{id: 1043648838, name: 'SteadyAsSheGoes'}, {id: 1018861768, name: 'QSSAM_NA'}, {id: 1038233466, name: 'YTREWQA_1216'}];
   }
-  searchName(){
-    this.http.get<any>(`https://api.worldofwarships.com/wows/account/list/?application_id=423feed867f0628c7a11a20a524097f7&search=${this.search}`).subscribe(data =>{
-      this.router.navigate([`/detail/${data.data[0].account_id}`]);
-    })
+
+  searchName() {
+    console.log('Search',this.search);
+    this.http.get<any>(`https://api.worldofwarships.com/wows/account/list/?application_id=423feed867f0628c7a11a20a524097f7&search=${this.search}`).subscribe(data => {
+      console.log('data', data);
+      this.cdr.detectChanges();
+      if (data) {
+        if (data.length !== 0) {
+        if (data.data[0].account_id) {
+          this.router.navigate([`/detail/${data.data[0].account_id}`]);
+        }
+        }
+      }
+    });
   }
+
   searchFunc(val) {
     this.search = val;
-    if(val != ''){
-      clearTimeout(this.timeout)
+    if (val != '') {
+      clearTimeout(this.timeout);
       this.timeout = setTimeout(() => {
-        this.show = true
+        this.show = true;
 
-        this.fetchResults(this.search, 10)
+        this.fetchResults(this.search, 10);
 
       }, 500);
     } else {
@@ -73,8 +92,8 @@ export class SubHeaderComponent implements OnInit {
 
   }
 
-  testFunc(){
-    console.log('came here')
+  testFunc() {
+    console.log('came here');
     this.show = false
     this.searchTickers = []
   }

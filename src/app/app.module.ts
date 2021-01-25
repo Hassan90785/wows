@@ -11,6 +11,7 @@ import { RecentEventsComponent } from './recent-events/recent-events.component';
 import { NewsComponent } from './news/news.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from '@angular/forms';
+import { PlayerDetailsComponent } from './player-details/player-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import {FormsModule} from '@angular/forms';
     FooterComponent,
     SubHeaderComponent,
     RecentEventsComponent,
-    NewsComponent
+    NewsComponent,
+    PlayerDetailsComponent
   ],
   imports: [
     BrowserModule,

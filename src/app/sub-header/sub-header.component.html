@@ -27,7 +27,7 @@
   		<span class="input-group-addon" (click)="searchSelectedValue('warship')" [ngClass]="{'selectedInput':selected==='warship'}">
   			<i class="fa fa-ship" aria-hidden="true"></i><span class="">Warship</span>
   		</span>
-   <input [ngModel]="search" [ngModelOptions]="{standalone: true}"
+   <input [ngModel]="search" name="search"
           (ngModelChange)="searchFunc($event)" class="search-box" [placeholder]="placeHolder" title="Search for stock information" />
 
 <div *ngIf="searchTickers.length && show" (click)="testFunc()" class="stock-search-result">
