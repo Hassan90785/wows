@@ -1,0 +1,175 @@
+<html>
+<head></head>
+<body>
+<div class="container">
+        <div class="row margin-8rem">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                 <h3 class="section-header float-left">{{obj.nickname}}</h3>
+                <button class="btn btn-default float-right">
+                  <i class="fa fa-binoculars "></i> Follow</button>
+              </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-border"></div>
+        </div>
+      </div>
+  <div class="row mt-5" style="margin-bottom: 10px;">
+	<div class="col col-10 text-left" >
+					<a href="?"  class="btn btn-primary btn-xs ">Random Battles</a>
+					<a href="?type=solo"  class="btn btn-default btn-xs ">Solo</a>
+					<a href="?type=div2"  class="btn btn-default btn-xs ">In Division (2)</a>
+					<a href="?type=div3"  class="btn btn-default btn-xs ">In Division (3)</a>
+					<a href="?type=rank"  class="btn btn-default btn-xs ">Ranked Battles</a>
+					<a href="?type=team" disabled class="btn btn-default btn-xs ">Team Battles</a>
+					<a href="?type=pve"  class="btn btn-default btn-xs ">Co-op Battles</a>
+					<a href="?type=all"  class="btn btn-default btn-xs ">All Battles</a>
+			</div>
+
+
+
+
+
+	<div class="col col-xs-4 text-right " >
+		<a href="/player/2006190869,squallxxx/" class="btn btn-primary btn-xs">Summary</a>
+		<a href="/player/2006190869,squallxxx/progress/" class="btn btn-default btn-xs">
+			Progress
+		</a>
+
+	</div>
+</div>
+<table class="table table-bordered mt-3 text-center ">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Overall</th>
+      <th scope="col">Recent</th>
+      <th scope="col">Last 7 days</th>
+      <th scope="col">Last 21 days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Distance</td>
+      <td class="colorRed">{{obj.distance}}</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td scope="row">Battles</td>
+      <td>{{obj.battles}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Hits</td>
+      <td class="colorRed">{{obj.hits}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Draws</td>
+      <td class="colorRed">{{obj.draws}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Damage To Buildings</td>
+      <td class="colorOrange">{{obj.damage_to_buildings}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Frags</td>
+      <td>{{obj.frags}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Shots</td>
+      <td  class="colorOrange">{{obj.shots}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Ships Spotted</td>
+      <td>{{obj.ships_spotted}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Survived Battles</td>
+      <td>{{obj.survived_battles}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Dropped Capture Points</td>
+      <td>{{obj.dropped_capture_points}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Max Damage Dealt To Buildings</td>
+      <td>{{obj.max_damage_dealt_to_buildings}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Draws</td>
+      <td>{{obj.draws}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Control Captured Points</td>
+      <td>{{obj.control_captured_points}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Battles Since 510</td>
+      <td>{{obj.battles_since_510}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Planes Killed</td>
+      <td>{{obj.planes_killed}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Max Planes Killed</td>
+      <td>{{obj.max_planes_killed}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+    <tr>
+      <td scope="row">Team Dropped Capture Points</td>
+      <td class="">{{obj.team_dropped_capture_points}}</td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+      <td> - &nbsp;&nbsp;&nbsp;  - </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</body>
+</html>
