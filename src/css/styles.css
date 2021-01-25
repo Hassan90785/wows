@@ -57,9 +57,11 @@ footer, header, hgroup, menu, nav, section {
 
 .navbar-brand:hover {
   color: #fff !important;
-
 }
-
+.nav-bg{
+  background-image: linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+  background-repeat: repeat-x;
+}
 .iconStyles {
   margin-right: 10px !important;
   color: #555555 !important;
