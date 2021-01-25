@@ -16,25 +16,34 @@
 
 <div class="input-group">
 
-  		<span class="input-group-addon" (click)="search('player')" [ngClass]="{'selectedInput':selected==='player'}">
+  		<span class="input-group-addon" (click)="searchSelectedValue('player')" [ngClass]="{'selectedInput':selected==='player'}">
   			<i class="fa fa-user" aria-hidden="true"></i>
   			<span >Player</span>
   		</span>
-  		<span class="input-group-addon" (click)="search('clan')" [ngClass]="{'selectedInput':selected==='clan'}">
+  		<span class="input-group-addon" (click)="searchSelectedValue('clan')" [ngClass]="{'selectedInput':selected==='clan'}">
   			<i class="fa fa-users" aria-hidden="true"></i>
   			<span class="">Clan</span>
   		</span>
-  		<span class="input-group-addon" (click)="search('warship')" [ngClass]="{'selectedInput':selected==='warship'}">
+  		<span class="input-group-addon" (click)="searchSelectedValue('warship')" [ngClass]="{'selectedInput':selected==='warship'}">
   			<i class="fa fa-ship" aria-hidden="true"></i><span class="">Warship</span>
   		</span>
- 		<input type="text" class="form-control" [placeholder]="placeHolder">
+   <input [ngModel]="search" [ngModelOptions]="{standalone: true}"
+          (ngModelChange)="searchFunc($event)" class="search-box" [placeholder]="placeHolder" title="Search for stock information" />
 
+<div *ngIf="searchTickers.length && show" (click)="testFunc()" class="stock-search-result">
+    <div *ngFor="let player of searchTickers" class="search-result-item">
 
+      <div class="search-result-name">
+       <strong> <a routerLink="/detail/{{player.id}}">
+        {{player.name}}
+      </a></strong>
+      </div>
+    </div>
+  </div>
   		<span class="input-group-btn">
-			<button type="submit" class="btn btn-default">Search</button>
+			<button type="submit" class="btn btn-default"  (click)="searchName()" >Search</button>
 		</span>
 </div>
-
 </form>
 </div>
   </div>

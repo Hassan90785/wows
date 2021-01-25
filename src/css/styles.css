@@ -249,3 +249,26 @@ p {
   vertical-align: baseline;
   border-radius: .25em;
 }
+.stock-search-result {
+  position: absolute;
+  z-index: 999;
+  border: 1px solid #efefef;
+  margin-top: 41px;
+  background-color: #fff;
+  width: 182px;
+  max-height: 150px;
+  overflow-y: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  left: 272px;
+}
+.search-result-item {
+  display: table;
+  table-layout: fixed;
+  padding: 10px 15px;
+  border-bottom: 1px solid #efefef;
+  cursor: pointer;
+  text-decoration: none !important;
+  width: 100%;
+  font-weight: 100;
+}
