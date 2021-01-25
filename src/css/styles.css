@@ -132,6 +132,9 @@ p {
   line-height: 1.5 !important;
   border-radius: 3px !important;
 }
+.height-submenu{
+  height:42px;
+}
 .input-group-addon, .input-group-btn, .input-group .form-control {
   display: table-cell;
 }
@@ -144,7 +147,9 @@ p {
   white-space: nowrap;
   vertical-align: middle;
 }
-
+.search-box{
+  width: 14vw;
+}
 .input-group-addon {
   padding: 6px 12px;
   font-size: 14px;

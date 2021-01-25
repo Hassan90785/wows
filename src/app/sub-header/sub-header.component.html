@@ -3,34 +3,29 @@
   <title>Wows</title>
 </head>
 <body>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-  <nav class="navbar navbar-expand-sm submenu-bg" [ngClass]="{'fixed-top':indicator,'submenu':indicator}">
-    <div class="container">
-
-  <div class="collapse navbar-collapse" >
-    <div class="combined-search" >
-    <form class="form-inline pull-left playerSearch">
+<div class="container-fluid  submenu-bg">
+    <div [ngClass]="{'fixed-top':indicator,'submenu':indicator,'height-submenu':indicator,'mt-5':indicator}" class="combined-search  submenu-bg" >
+   <div class="container mt-2">
+    <form class="form-inline pull-left playerSearch submenu-bg">
 
 
 <div class="input-group">
 
-  		<span class="input-group-addon" (click)="searchSelectedValue('player')" [ngClass]="{'selectedInput':selected==='player'}">
-  			<i class="fa fa-user" aria-hidden="true"></i>
-  			<span >Player</span>
+  		<span (click)="searchSelectedValue('player')" [ngClass]="{'selectedInput':selected==='player'}" class="input-group-addon">
+  			<i aria-hidden="true" class="fa fa-user"></i>
+  			<span>Player</span>
   		</span>
-  		<span class="input-group-addon" (click)="searchSelectedValue('clan')" [ngClass]="{'selectedInput':selected==='clan'}">
-  			<i class="fa fa-users" aria-hidden="true"></i>
+  		<span (click)="searchSelectedValue('clan')" [ngClass]="{'selectedInput':selected==='clan'}" class="input-group-addon">
+  			<i aria-hidden="true" class="fa fa-users"></i>
   			<span class="">Clan</span>
   		</span>
-  		<span class="input-group-addon" (click)="searchSelectedValue('warship')" [ngClass]="{'selectedInput':selected==='warship'}">
-  			<i class="fa fa-ship" aria-hidden="true"></i><span class="">Warship</span>
+  		<span (click)="searchSelectedValue('warship')" [ngClass]="{'selectedInput':selected==='warship'}" class="input-group-addon">
+  			<i aria-hidden="true" class="fa fa-ship"></i><span class="">Warship</span>
   		</span>
-   <input [ngModel]="search" name="search"
-          (ngModelChange)="searchFunc($event)" class="search-box" [placeholder]="placeHolder" title="Search for stock information" />
+   <input (ngModelChange)="searchFunc($event)" [ngModel]="search"
+          [placeholder]="placeHolder" class="search-box" name="search" title="Search for stock information"/>
 
-<div *ngIf="searchTickers.length && show" (click)="testFunc()" class="stock-search-result">
+<div (click)="testFunc()" *ngIf="searchTickers.length && show" class="stock-search-result">
     <div *ngFor="let player of searchTickers" class="search-result-item">
 
       <div class="search-result-name">
@@ -41,16 +36,12 @@
     </div>
   </div>
   		<span class="input-group-btn">
-			<button type="submit" class="btn btn-default"  (click)="searchName()" >Search</button>
+			<button (click)="searchName()" class="btn btn-default" type="submit">Search</button>
 		</span>
 </div>
 </form>
 </div>
-  </div>
-  </div>
-</nav>
-    </div>
-  </div>
 </div>
+  </div>
 </body>
 </html>
