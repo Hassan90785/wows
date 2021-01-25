@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Wows</title>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <nav class="navbar navbar-expand-sm submenu-bg" [ngClass]="{'fixed-top':indicator,'submenu':indicator}">
+    <div class="container">
+
+  <div class="collapse navbar-collapse" >
+    <div class="combined-search" >
+    <form class="form-inline pull-left playerSearch">
+
+
+<div class="input-group">
+
+  		<span class="input-group-addon" (click)="search('player')" [ngClass]="{'selectedInput':selected==='player'}">
+  			<i class="fa fa-user" aria-hidden="true"></i>
+  			<span >Player</span>
+  		</span>
+  		<span class="input-group-addon" (click)="search('clan')" [ngClass]="{'selectedInput':selected==='clan'}">
+  			<i class="fa fa-users" aria-hidden="true"></i>
+  			<span class="">Clan</span>
+  		</span>
+  		<span class="input-group-addon" (click)="search('warship')" [ngClass]="{'selectedInput':selected==='warship'}">
+  			<i class="fa fa-ship" aria-hidden="true"></i><span class="">Warship</span>
+  		</span>
+ 		<input type="text" class="form-control" [placeholder]="placeHolder">
+
+
+  		<span class="input-group-btn">
+			<button type="submit" class="btn btn-default">Search</button>
+		</span>
+</div>
+
+</form>
+</div>
+  </div>
+  </div>
+</nav>
+    </div>
+  </div>
+</div>
+</body>
+</html>
